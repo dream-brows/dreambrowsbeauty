@@ -1,0 +1,2124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+}
+
+.small-navbar {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    display: table;
+}
+
+.small-navbar div {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.small-navbar div ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.small-navbar div ul li {
+    float: left;
+    list-style: none;
+}
+
+.small-navbar div ul li div {
+    float: right;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.small-navbar div ul li span {
+    margin-left: 7px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.main-navbar {
+    display: inline;
+}
+
+
+
+nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: #ffffff;
+    /* box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    position: sticky;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: #000000;
+}
+.nav-links li a:hover {
+    color: #000000;
+}
+.nav-links li {
+    position: relative;
+    margin-left: -250px;
+}
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #000000;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #000000;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+        margin-top: -3px;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        margin-top: -10px;
+        position: fixed;
+        background: #ffffff;
+        height: 102vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+.logo img {
+    width: 100%;
+    margin-top: 2px;
+    margin-left: 50px;
+}
+
+.buttons {
+    /* background-color: blue; */
+    margin-top: 23px;
+    margin-right: 207px;
+}
+
+.buttons ul {
+    float: left;
+    display: flex;
+}
+
+.buttons ul li {
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+}
+
+.buttons ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+.crousel img {
+    width: 100%;
+    height: 551px;
+}
+
+.crousel-text h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -350px;
+    margin-left: 38%;
+}
+
+.crousel-text h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 150px;
+    color: #e15656;
+    margin-left: 65%;
+}
+
+.crousel-text-2 h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -350px;
+    margin-left: 34%;
+}
+
+.crousel-text-2 h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 150px;
+    color: #e15656;
+    margin-left: 65%;
+}
+
+.crousel-button {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    margin-top: -189px;
+    margin-left: 73px;
+}
+
+.crousel-button button {
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #000000;
+}
+
+.crousel-button button span {
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+}
+
+.about-heading h2 {
+    margin: 0 auto;
+    width: 601px;
+    font-size: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    /* z-index: 9999; */
+    position: relative;
+}
+
+.about-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    margin: 0 auto;
+    font-size: 96px;
+    width: 100px;
+    margin-left: 64%;
+    margin-top: -137px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+}
+
+.abot-heading h2 {
+    /* margin: 0 auto; */
+    margin-top: -130px;
+    margin-left: 100px;
+    width: 83%;
+    font-size: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    z-index: 9999;
+    position: relative;
+}
+
+.abot-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    margin: 0 auto;
+    font-size: 96px;
+    width: 100px;
+    margin-left: 40%;
+    margin-top: -175px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+}
+
+.abot-para {
+    width: 51%;
+    margin-left: 7%;
+
+}
+
+.abot-designation {
+    margin-left: 7%;
+    font-family: 'Cormorant Garamond';
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.abot-img img {
+    width: 500px;
+    float: right;
+}
+
+.abot-info {
+    width: 90%;
+    height: 100px;
+    /* background-color: #f5c6c6; */
+    margin-top: -74px;
+    margin-left: 205px;
+}
+
+.abot-years {
+    width: 10%;
+    margin-left: 100px;
+    font-family: 'Cormorant Garamond', serif;
+    float: left;
+}
+
+.abot-years h2 {
+    font-size: 150px;
+    display: flex;
+}
+
+.abot-years h2 span {
+    margin-top: 96px;
+    width: 57%;
+    margin-left: 34px;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.abot-clients {
+    width: 25%;
+    margin-left: 200px;
+    /* margin-top: -40px; */
+    font-family: 'Cormorant Garamond', serif;
+    float: left;
+
+}
+
+.abot-clients h2 {
+    font-size: 150px;
+    display: flex;
+}
+
+.abot-clients h2 span {
+    margin-top: 121px;
+    width: 57%;
+    margin-left: 34px;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.about-para {
+    width: 65%;
+    margin-left: 30%;
+
+}
+
+.about-button {
+    width: 150px;
+    height: 50px;
+    margin-left: 30%;
+}
+
+.about-button button {
+    width: 150px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid #000000;
+}
+
+.about-info {
+    width: 30%;
+    background-color: #ffffff;
+    margin-top: -375px;
+}
+
+.about-years {
+    width: 25%;
+    margin-left: 100px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.about-years h2 {
+    font-size: 80px;
+    display: flex;
+}
+
+.about-years h2 span {
+    margin-top: 33px;
+    width: 57%;
+    margin-left: 34px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.about-clients {
+    width: 25%;
+    margin-left: 100px;
+    margin-top: -40px;
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+.about-clients h2 {
+    font-size: 80px;
+    display: flex;
+}
+
+.about-clients h2 span {
+    margin-top: 33px;
+    width: 57%;
+    margin-left: 55px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.Team {
+    margin-top: 137px;
+}
+
+.team-heading h2 {
+    margin-left: 100px;
+    width: 601px;
+    font-size: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    z-index: 9999;
+    position: relative;
+
+}
+
+.team-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 96px;
+    width: 100px;
+    margin-left: 26%;
+    margin-top: -137px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+}
+
+.team-members {
+    width: 88%;
+    margin: 0 auto;
+    height: 100px;
+    /* background-color: #e15656; */
+}
+
+.profile {
+    margin-top: -64px;
+    margin-left: 370px;
+}
+
+.profile-image {
+    float: left;
+    margin-left: 100px;
+    width: 362px;
+    height: 500px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 200px;
+    background-image: url(./images/1.jpg);
+}
+
+.profile-owner {
+    margin-top: 513px;
+    margin-left: 92px;
+    font-weight: 900;
+    font-size: 32px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.profile-designation {
+    margin-top: -32px;
+    margin-left: 117px;
+    font-weight: 300;
+    font-size: 23px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.profile-image-2 {
+    float: left;
+    margin-left: 100px;
+    width: 362px;
+    height: 500px;
+    background-color: #000000;
+    border: 0px solid;
+    border-radius: 200px;
+    background-image: url(./images/2.jpg);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.Portfolio {
+    margin-top: 35px;
+}
+
+.portfolio-heading h2 {
+    margin-left: 100px;
+    width: 601px;
+    font-size: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    z-index: 9999;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.portfolio-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 96px;
+    width: 100px;
+    margin-left: 57%;
+    margin-top: -137px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+}
+
+.portfolio-images-1 {
+    width: 250px;
+    height: 400px;
+    background-color: #e15656;
+    background-image: url(./images/3.jpg);
+    margin-left: 200px;
+    float: left;
+}
+
+.portfolio-images-2 {
+    width: 250px;
+    height: 400px;
+    background-color: #e15656;
+    background-image: url(./images/4.jpg);
+    margin-left: 200px;
+    margin-top: 100px;
+    float: left;
+}
+
+.portfolio-images-3 {
+    width: 250px;
+    height: 400px;
+    background-color: #e15656;
+    background-image: url(./images/5.jpg);
+    margin-left: 200px;
+    float: left;
+}
+
+.portfolio-images-4 {
+    width: 250px;
+    height: 400px;
+    background-color: #e15656;
+    background-image: url(./images/6.jpg);
+    margin-left: 200px;
+    margin-top: 100px;
+    float: left;
+}
+
+.portfolio-images-5 {
+    width: 250px;
+    height: 400px;
+    background-color: #e15656;
+    background-image: url(./images/7.jpg);
+    margin-left: 200px;
+    float: left;
+    margin-top: -399px;
+}
+
+.portfolio-images-6 {
+    width: 250px;
+    height: 400px;
+    background-color: #e15656;
+    background-image: url(./images/8.jpg);
+    margin-left: 200px;
+    float: left;
+    margin-top: -299px;
+}
+
+.portfolio-button {
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.portfolio-button button {
+    width: 150px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    margin-top: 23px;
+
+}
+
+.review {
+    width: 100%;
+    height: 500px;
+    margin-top: 950px;
+    /* background-color: aqua; */
+}
+
+.review-img img {
+    width: 35%;
+    margin-left: 100px;
+}
+
+.review-heading {
+    margin-top: -500px;
+    margin-left: 400px;
+}
+
+.review-heading h2 {
+    margin-left: 100px;
+    width: 601px;
+    font-size: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    z-index: 9999;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.review-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 96px;
+    width: 100px;
+    margin-left: 57%;
+    margin-top: -137px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+}
+
+.review-heading h4 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 150px;
+    width: 100px;
+    margin-left: 23%;
+    margin-top: -68px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+}
+
+.booking-image img {
+    width: 310px;
+    margin-left: 75px;
+    float: left;
+}
+
+.booking-details {
+    width: 375px;
+    height: 466px;
+    background-color: rgb(245, 245, 245);
+    float: left;
+}
+
+.hours-heading {
+    margin-top: 70px;
+    margin-left: -400px;
+}
+
+.hours-heading h2 {
+    margin-left: 437px;
+    width: 601px;
+    font-size: 34px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    z-index: 9999;
+    position: relative;
+    color: #000000;
+
+}
+
+.hours-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 40px;
+    width: 100px;
+    margin-left: 67%;
+    margin-top: -87px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+    opacity: 70%;
+}
+
+.hours-heading p {
+    width: 40%;
+    margin-top: -20px;
+    margin-left: 440px;
+}
+
+.timing {
+    margin-left: 40px;
+    width: 70%;
+    /* background-color: aqua; */
+    /* float: left; */
+}
+
+.time {
+    float: left;
+    margin-top: -17px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+.booking-button {
+    width: 150px;
+    height: 50px;
+    margin-left: 0%;
+}
+
+.booking-button button {
+    width: 200px;
+    height: 55px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    margin-top: 25%;
+}
+
+.serivces-heading {
+    margin-top: -90px;
+    /* margin-left: -400px; */
+}
+
+.serivces-heading h2 {
+    /* margin-left: 437px; */
+    width: 272px;
+    font-size: 34px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    z-index: 9999;
+    position: relative;
+    color: #000000;
+    margin: 0 auto;
+
+}
+
+.serivces-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 40px;
+    width: 450px;
+    /* margin-left: 67%; */
+    /* margin-top: -87px; */
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+    margin: 0 auto;
+    /* opacity: 70%;*/
+}
+
+.services {
+    margin-left: 103px;
+}
+
+.service-1 {
+    width: 300px;
+    margin-left: 100px;
+    height: 300px;
+    background-color: #000000;
+    background-image: url(./images/threading.jpeg);
+    float: left;
+}
+
+.service-2 {
+    width: 300px;
+    margin-left: 100px;
+    height: 300px;
+    background-color: #000000;
+    background-image: url(./images/eyelashes.jpeg);
+    float: left;
+}
+
+.service-3 {
+    width: 300px;
+    margin-left: 100px;
+    height: 300px;
+    background-color: #000000;
+    background-image: url(./images/wax.jpeg);
+    float: left;
+    margin-bottom: 100px;
+}
+
+.service-4 {
+    width: 300px;
+    margin-left: 100px;
+    height: 300px;
+    background-color: #000000;
+    background-image: url(./images/tinitng.jpg);
+    float: left;
+}
+
+.service-5 {
+    width: 300px;
+    margin-left: 100px;
+    height: 300px;
+    background-color: #000000;
+    background-image: url(./images/facials.jpg);
+    float: left;
+}
+
+.service-6 {
+    width: 300px;
+    margin-left: 100px;
+    height: 300px;
+    background-color: #000000;
+    background-image: url(./images/heena.jpg);
+    float: left;
+}
+
+.service-details {
+    width: 210px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 244px;
+    margin-left: 45px;
+    /* border: 1px solid black; */
+    opacity: 70%;
+    /* box-shadow: 1px 1px #000000;*/
+}
+
+.service-details h4 {
+    font-family: 'Cormorant Garamond';
+    font-size: 21px;
+    font-weight: 500;
+    /* margin-left: 16px; */
+    justify-content: center;
+    padding-top: 10px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+/* contact us */
+.contact-image img {
+    width: 310px;
+    margin-left: 10px;
+    float: left;
+}
+
+.contact-details {
+    width: 375px;
+    height: 466px;
+    background-color: rgb(245, 245, 245);
+    float: left;
+}
+
+.contact-heading {
+    margin-top: 70px;
+    margin-left: -400px;
+}
+
+.contact-heading h2 {
+    margin-left: 437px;
+    width: 372px;
+    font-size: 34px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    z-index: 9999;
+    position: relative;
+    color: #000000;
+
+}
+
+.contact-heading h3 {
+    font-family: 'Dancing Script', cursive;
+    /* margin: 0 auto; */
+    font-size: 40px;
+    width: 100px;
+    margin-left: 67%;
+    margin-top: -87px;
+    color: #e15656;
+    font-weight: 200;
+    position: relative;
+    opacity: 70%;
+}
+
+.contact-heading p {
+    width: 40%;
+    margin-top: -20px;
+    margin-left: 440px;
+}
+
+.Address {
+    margin-left: 40px;
+    width: 70%;
+    /* background-color: aqua; */
+    /* float: left; */
+}
+
+.address {
+    float: left;
+    margin-top: -82px;
+    margin-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+.address h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.address p {
+    margin-top: -47px;
+}
+
+.Phone {
+    margin-left: 40px;
+    width: 70%;
+    margin-top: 80px;
+    /* background-color: aqua; */
+    /* float: left; */
+}
+
+.phon {
+    float: left;
+    margin-top: -67px;
+    margin-left: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+.phon h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.phon p {
+    margin-top: -47px;
+}
+
+footer {
+    margin-top: 300px;
+    width: 100%;
+    height: 400px;
+    /* background-color: #e15656; */
+}
+
+.footer {
+    width: 90%;
+    height: 300px;
+    /* background-color: aqua; */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+.contat {
+    margin-top: -100px;
+    margin-left: 200px;
+}
+
+.location {
+    width: 300px;
+    height: 350px;
+    background-color: #f5c6c6;
+    float: left;
+    margin-right: 100px;
+}
+
+.location i {
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+.location h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-left: 95px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+.location p {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0px;
+    margin-top: -33px;
+    font-weight: 300;
+    display: flex;
+    text-align: center;
+}
+
+.email {
+    width: 300px;
+    height: 350px;
+    background-color: #f5c6c6;
+    float: left;
+    margin-right: 100px;
+}
+
+.email i {
+    margin-top: 50px;
+    margin-left: 107px;
+}
+
+.email h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-left: 110px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+.email p {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 49px;
+    margin-top: -33px;
+    font-weight: 300;
+    display: flex;
+    text-align: center;
+}
+
+.phone {
+    width: 300px;
+    height: 350px;
+    background-color: #f5c6c6;
+    float: left;
+    margin-top: 0px;
+}
+
+.phone i {
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+.phone h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-left: 110px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+.phone p {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 93px;
+    margin-top: -33px;
+    font-weight: 300;
+    display: flex;
+    text-align: center;
+}
+
+
+/* footer */
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700); */
+
+/* * {
+  font-family: 'Roboto', sans-serif;
+} */
+
+section {
+    width: 100%;
+    display: inline-block;
+    background: #f1ece9;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-distributed {
+    /* background: #f1ece9; */
+    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12); */
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #000000;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #000000;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #000000;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #000000;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+
+}
+@media (max-width: 321px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width:1025px) {
+    .buttons {
+        margin-right: 23px
+    }
+
+    .crousel img {
+        width: 100%;
+        height: 1%;
+    }
+
+    .about-para {
+        width: 55%;
+        margin-left: 37%;
+        text-align: justify;
+    }
+
+    .about-years h2 span {
+        width: 78%;
+    }
+
+    .profile-image {
+
+        margin-left: -100px;
+    }
+
+    .portfolio-images-5,
+    .portfolio-images-6 {
+        visibility: hidden;
+    }
+
+    .portfolio-images-2 {
+        margin-top: 0px;
+    }
+
+    .portfolio-images-3 {
+        margin-top: 100px;
+    }
+
+    .review-heading {
+        margin-left: 0px;
+    }
+
+    .review-img img {
+        width: 25%;
+        margin-top: 90px;
+        margin-left: 0px;
+    }
+
+    .review-heading h4 {
+        margin-left: 35%;
+    }
+
+    .booking-image img {
+        width: 490px;
+        height: 540px;
+        margin-left: 10px;
+        float: left;
+    }
+
+    .booking-details {
+        width: 513px;
+        height: 540px;
+        background-color: rgb(245, 245, 245);
+        float: left;
+    }
+
+    .contact-image img {
+        width: 490px;
+        height: 540px;
+        margin-left: 10px;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .contact-details {
+        width: 513px;
+        height: 540px;
+        margin-top: 10px;
+    }
+
+    .crousel-text h2 {
+        font-size: 100px;
+        margin-top: 67px;
+    }
+
+    .service-3 {
+        margin-top: 10px;
+        /* margin-bottom: 10px; */
+    }
+
+    .service-4 {
+        margin-top: 10px;
+    }
+
+    .service-5 {
+        margin-top: 10px;
+    }
+
+    .service-6 {
+        margin-top: -300px;
+    }
+
+    .crousel-text-2 h2 {
+        margin-left: 59%;
+        margin-top: -40px;
+    }
+
+    .location {
+        margin-left: -160px;
+        margin-right: 20px;
+    }
+
+    .email {
+        margin-right: 20px;
+    }
+
+    iframe {
+        width: 1024px;
+    }
+
+    .crousel-text h1 {
+        margin-top: -258px;
+        margin-left: 36%;
+    }
+
+    .crousel-text-2 h1 {
+        margin-top: -246px;
+        margin-left: 28%;
+    }
+}
+
+@media (max-width:769px) {
+    .small-navbar {
+        visibility: hidden;
+        width: 0%;
+        height: 0px;
+        margin-top: -240px;
+    }
+
+    .logo img {
+        margin-left: 25px;
+    }
+
+    .buttons ul {
+        margin-top: 10px;
+    }
+
+    .crousel img {
+        margin-top: 30px;
+        width: 100%;
+        height: 1%;
+    }
+
+    .about-info {
+        margin-top: -787px;
+    }
+
+    .about-para {
+        width: 55%;
+        margin-left: 43%;
+        text-align: justify;
+    }
+
+    .about-years h2 span {
+        width: 104%;
+    }
+
+    .Team {
+        margin-top: 522px;
+    }
+
+    .profile-image {
+        margin-left: -190px;
+    }
+
+    .portfolio-images-1 {
+        margin-left: 100px;
+            margin-left: 100px;
+    }
+
+    .portfolio-images-2 {
+        margin-left: 60px;
+    }
+
+    .portfolio-images-3 {
+        margin-top: 60px;
+        margin-left: 100px;
+    }
+
+    .portfolio-images-4 {
+        margin-left: 60px;
+        margin-top: 60px;
+    }
+
+    .review-heading {
+        margin-top: -408px;
+    }
+
+    .review-heading h2 {
+        font-size: 40px;
+    }
+
+    .review-heading h3 {
+        font-size: 65px;
+    }
+
+    .review-heading h4 {
+        margin-top: -50px;
+        margin-left: 29%;
+    }
+
+    .testimonial_slider_2 {
+        margin-right: 199px;
+    }
+
+    .booking-image img {
+        width: 318px;
+        height: 480px;
+    }
+
+    .booking-details {
+        width: 431px;
+        height: 480px;
+    }
+
+    .contact-details {
+        width: 431px;
+        height: 480px;
+    }
+
+    .contact-image img {
+        width: 318px;
+        height: 480px;
+    }
+
+    .crousel-text h1 {
+        margin-top: -236px;
+        margin-left: 30%;
+    }
+
+    .crousel-text h2 {
+        font-size: 80px;
+        margin-top: -15px;
+        margin-left: 484px;
+    }
+
+    .abot-img img {
+        visibility: hidden;
+        width: 455px;
+        margin-top: -302px;
+    }
+
+    .abot-heading h2 {
+        margin-top: -491px;
+    }
+
+    .abot-heading h3 {
+        font-size: 65px;
+        margin-left: 70%;
+    }
+
+    .abot-para {
+        width: 100%;
+        margin-left: 0%;
+        text-align: justify;
+    }
+
+    .abot-designation {
+        margin-left: 2.5%;
+        font-size: 23px;
+    }
+
+    .abot-info {
+        margin-left: 16px;
+        margin-top: -120px;
+    }
+
+    .abot-years h2 span {
+        width: 74%;
+        font-size: 17px;
+        margin-left: 7px;
+    }
+
+    .abot-clients h2 span {
+        margin-top: 102px;
+        margin-left: 13px;
+    }
+
+    .abot-years {
+        width: 10%;
+        margin-left: 100px;
+        font-family: 'Cormorant Garamond', serif;
+        float: left;
+        margin-right: 32px;
+    }
+
+    .serivces-heading {
+        margin-top: -57px;
+    }
+
+    .serivces-heading h2 {
+        /* margin-left: 437px; */
+        width: 486px;
+        font-size: 61px;
+    }
+
+    .serivces-heading h3 {
+        font-size: 29px;
+        width: 450px;
+        margin-left: 229px;
+        margin-top: -13px;
+    }
+
+    .service-1 {
+        margin-left: -33px;
+    }
+
+    .service-2 {
+        margin-left: 33px;
+    }
+
+    .service-3 {
+        margin-left: -33px;
+    }
+
+    .service-4 {
+        margin-left: 33px;
+    }
+
+    .service-5 {
+        margin-left: 33px;
+    }
+
+    .service-6 {
+        margin-left: -33px;
+    }
+
+    .crousel-text-2 h1 {
+        margin-top: -225px;
+        margin-left: 21%;
+    }
+
+    .crousel-text-2 h2 {
+        font-size: 110px;
+    }
+
+    .location {
+        margin-left: -152px;
+        margin-right: 80px;
+    }
+
+    .phone {
+        margin-top: 80px;
+        margin-left: 31px;
+        margin-bottom: 100px;
+    }
+
+    iframe {
+        width: 768px;
+        margin-bottom: -300px;
+    }
+
+    .Conatact {
+        margin-top: 150px;
+    }
+}
+
+
+
+/* .burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 41px;
+}
+.line{
+    width: 33px;
+    background-color: #000000;
+    height: 4px;
+    margin: 3px 3px;
+} */
+/* @media (max-width:610px){
+    .buttons ul{
+        flex-direction: column;
+    }
+    .logo img {
+        margin-left: 28px;
+        margin-top: 10px;
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav-resp{
+        height: 22px;
+    }
+    .v-class-resp{
+        opacity: 0;
+    }
+} */
+@media (max-width:426px) {
+    .portfolio-heading h2 {
+        margin-left: 46px;
+        width: 81%;
+        font-size: 29px;
+        margin-top: 1110px;
+    }
+    .crousel img {
+        margin-top: 186px;
+        width: 100%;
+        height: 213px;
+    }
+    .crousel-button{
+        visibility: hidden;
+    }
+
+    .crousel-text h1 {
+        margin-top: -171px;
+        margin-left: 18%;
+        font-size: 76px;
+    }
+
+    .about-info {
+        visibility: hidden;
+    }
+
+    .about-para {
+        width: 95%;
+        margin-left: 3%;
+    }
+
+    .about-heading h2 {
+        width: 203px;
+        font-size: 104%;
+        font-weight: 900;
+        margin-top: -35px;
+    }
+
+    .about-heading h3 {
+        font-size: 44px;
+        margin-top: -69px;
+    }
+
+    .team-heading h2 {
+        margin-left: 45px;
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .team-heading h3 {
+        font-size: 55px;
+        width: 100px;
+        margin-left: 63%;
+    }
+
+    .profile-image {
+        margin-left: -330px;
+        width: 300px;
+        height: 416px;
+        margin-top: 85px;
+    }
+
+    .profile-owner {
+        margin-top: 421px;
+        margin-left: 61px;
+    }
+
+    .profile-designation {
+        margin-left: 88px;
+    }
+
+    .portfolio-heading h2 {
+        margin-left: 46px;
+        width: 81%;
+        font-size: 27px;
+    }
+
+    .portfolio-heading h3 {
+        font-size: 46px;
+        width: 100%;
+        margin-top: -100px;
+    }
+
+    .Portfolio {
+        margin-top: 85px;
+    }
+
+    .portfolio-images-2 {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .portfolio-images-3 {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .portfolio-images-4 {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .review-heading h2 {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .review-heading h3 {
+        font-size: 38px;
+        width: 43%
+    }
+
+    .portfolio hr {
+        margin-top: -100px;
+    }
+
+    .review {
+        /* width: 92%;
+        margin-right: -95px; */
+        visibility: hidden;
+    }
+
+    /* .Booking{
+        margin-top: -200px;
+    } */
+    .booking-details {
+        width: 424px;
+    }
+
+    .booking-image img {
+        width: 424px;
+        margin-left: 0px;
+        margin-top: -400px;
+    }
+
+    .booking-details {
+        width: 424px;
+    }
+
+    .contact-image img {
+        width: 424px;
+        margin-left: 0px;
+    }
+
+    .contact-details {
+        width: 424px;
+        margin-top: 0px;
+    }
+
+    .abot-heading h2 {
+        margin-top: -366px;
+        width: 100%;
+        font-size: 23px;
+        margin-left: 70px;
+        z-index: 0;
+        /* font-size: 44px; */
+    }
+    .abot-heading h3{
+        font-size: 44px;
+    }
+    .abot-para {
+        width: 94%;
+        margin-left: 3%;
+    }
+    .abot-info {
+        margin-left: -19px;
+    }
+    .abot-years h2 span {
+        width: 140%;
+    }
+    .abot-clients {
+        margin-left: 133px;
+        margin-top: -156px;
+    }
+    .crousel-text h2 {
+        font-size: 61px;
+        margin-top: 69px;
+        margin-left: 200px;
+    }
+    .serivces-heading h2 {
+        margin-left: 22px;
+        width: 100%;
+        font-size: 48px;
+        z-index: 0;
+    }
+    .serivces-heading h3 {
+        font-size: 29px;
+        width: 330px;
+        margin-left: 47px;
+        margin-top: -13px;
+    }
+    .serivces-heading {
+        margin-top: 141px;
+    }
+    .service-2 {
+        margin-left: -33px;
+        margin-top: 10px;
+    }
+    .service-4 {
+        margin-left: -33px;
+        margin-top: -90px;
+    }
+    .service-5 {
+        margin-left: -33px;
+        margin-top: 10px;
+    }
+    .service-6 {
+        margin-left: -33px;
+        margin-top: 10px;
+    }    
+    .crousel-text-2 h1 {
+        font-size: 75px;
+        margin-top: -163px;
+    margin-left: 7%;
+    }
+    .crousel-text-2 h2 {
+        font-size: 60px;
+        margin-top: 57px;
+    }
+    .location {
+        margin-top: 65px;
+        margin-left: -142px;
+    }
+    .email{
+        margin-top: 15px;
+    margin-left: -142px;
+    }
+    .phone{
+        margin-top: 15px;
+    margin-left: -142px;
+    }
+    iframe{
+        width: 100%;
+    }
+}
+@media (max-width: 376px){
+    .serivces-heading {
+        margin-top: 170px;
+    }
+    .crousel img {
+        margin-top: 186px;
+        width: 100%;
+        height: 251px;
+    }
+    .profile-image {
+        margin-left: -359px;
+    }
+    .portfolio{
+        margin-top: 90px;
+    margin-left: -38px;
+    }
+    .portfolio-heading h2 {
+        font-size: 25px;
+        margin-top: 1155px;
+    }
+    .portfolio-heading h3 {
+        width: 38%;
+    }
+    .booking-image img {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -590px;
+    }
+    .booking-details {
+        width: 100%;
+        margin-top: -110px;
+    }
+    .contact-image img {
+        margin-top: 0px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .contact-details {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .crousel-text h1 {
+        margin-top: -180px;
+        margin-left: 16%;
+        font-size: 70px;
+    }
+    .crousel-text h2 {
+        font-size: 50px;
+        margin-top: 58px;
+        margin-left: 198px;
+    }
+    .abot-heading h2 {
+        margin-top: -371px;
+        width: 90%;
+        font-size: 23px;
+        margin-left: 37px;
+        z-index: 0;
+        /* font-size: 44px; */
+    }
+    .abot-img img {
+        visibility: hidden;
+        width: 455px;
+        margin-top: -245px;
+    }
+    .serivces-heading h2 {
+        margin-left: 22px;
+        width: 94%;
+        font-size: 42px;
+    }
+    .serivces-heading h3 {
+        font-size: 24px;
+        width: 319px;
+        margin-left: 55px;
+        margin-top: -13px;
+    }
+    .service-1, .service-2, .service-3, .service-4, .service-5, .service-6 {
+        margin-left: -66px;
+    }
+    .crousel-text-2 h1 {
+        font-size: 62px;
+        margin-top: -164px;
+        margin-left: 11%;
+    }
+    .location {
+        margin-top: 100px;
+        margin-left: -156px;
+    }
+    .email {
+        margin-left: -156px;
+    }
+    .phone {
+        margin-left: -156px;
+    }
+    /* .Booking hr{
+        margin-top: -180px;
+    } */
+}
+@media (max-width:321px){
+    .profile-image {
+        margin-left: -359px;
+    }
+    .crousel-text h2 {
+        font-size: 41px;
+        margin-top: 63px;
+        margin-left: 170px;
+    }
+    .crousel-text h1 {
+        margin-left: 10%;
+    }
+    .abot-heading h2 {
+        margin-left: 21px;
+    }
+    .abot-heading h3 {
+        font-size: 33px;
+    }
+    .abot-info {
+        margin-left: -75px;
+    }
+    .abot-years h2 span {
+        width: 177%;
+    }
+    .serivces-heading h2 {
+        font-size: 37px;
+    }
+    .serivces-heading h3 {
+        font-size: 21px;
+        width: 239px;
+        margin-left: 50px;
+    }
+    .services {
+        margin-left: 78px;
+    }
+    .crousel-text-2 h1 {
+        font-size: 53px;
+    }
+    .crousel-text-2 h2 {
+        font-size: 47px;
+    }
+    .location {
+       margin-left: -190px;
+    }
+    .email {
+        margin-left: -190px;
+     }
+     .phone {
+        margin-left: -190px;
+     }
+}
