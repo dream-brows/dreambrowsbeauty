@@ -805,6 +805,7 @@ nav{
     font-weight: 200;
     position: relative;
     margin: 0 auto;
+    visibility: hidden;
     /* opacity: 70%;*/
 }
 
@@ -1929,6 +1930,7 @@ section {
         width: 330px;
         margin-left: 47px;
         margin-top: -13px;
+
     }
     .serivces-heading {
         margin-top: 206px;
