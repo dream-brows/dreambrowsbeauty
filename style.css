@@ -1651,6 +1651,7 @@ section {
         width: 450px;
         margin-left: 229px;
         margin-top: -13px;
+        visibility: hidden;
     }
 
     .service-1 {
@@ -1930,6 +1931,7 @@ section {
         width: 330px;
         margin-left: 47px;
         margin-top: -13px;
+        visibility: hidden;
 
     }
     .serivces-heading {
